@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head
+>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulaire</title>
+    <style>
+        * {
+    padding: 0%;
+    margin: 0%;
+}
+ 
+body {
+ font-family:Arial, Helvetica, sans-serif;
+ border: 2px solid black;
+  border-radius: 5px;
+ size: 12px;
+ font-size: 18pt;
+ background-color: black;
+ margin-bottom: 20vh;
+ 
+ }
+ div{
+     text-align: left;
+     color : blanchedalmond;
+ }
+ a {
+    color:  #8c910b;
+  }
+
+ .title {
+     padding: 18px;
+     align-items: center;
+     scrollbar-color:#181818 ;
+     size: 18pt;
+     font-family:'Lucida Grande';
+ }
+ 
+ p{ text-align: left;
+    color: blanchedalmond;
+    font-size: 10px;
+}
+ form {
+     margin: 10px;
+    
+    text-align: center;
+    width: 430px;
+    border-radius: 5%;
+    text-align: left;
+}
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form input[type="email"],
+form input[type="password"]{
+    border-radius: 15px;
+    box-shadow: 1px, color  #777;
+    border-width: 1px, color #444;
+    width: 300px;
+    padding: 7px 8px 7px 30px, color #333;
+    box-shadow:1px, color #FFF ;
+    background-color: #ddd ;
+}
+select{
+    text-align: left;
+    border-radius: 15px;
+    box-shadow: 1px, color  #777;
+    border-width: 1px, color #444;
+    width: 300px;
+    padding: 7px 8px 7px 30px, color #333;
+    box-shadow:1px, color #FFF ;
+    background-color: #ddd ;
+}
+form input[type="submit"]{
+    border: 0px ;
+    box-shadow: 3px 3px 12px #999;
+    border-radius: 75%;
+    width : 100px;
+    height: 40px;
+    background-image: linear-gradient(blanchedalmond, #8c910b );
+    list-style-position: inside;
+}
+    </style>
+</head>
+<body>
+    <div class="title">create an Account</div>
+    
+    <form method="POST" action="test.php">
+        <p>Nom & prénom:</p>
+        <input  type= "text" name="nom"   id="nom" placeholder="Name"/><br />
+        <i class="glyphicon glyphicon-envelope"></i>
+        <p>Date de naissance:</p>
+        <input type="date" name ="date_de_naissance" id="date_de_naissance" placeholder="jj/mm/aaaa"></br> 
+        <p>Numéro de téléphone:</p>
+        <input  type= "number" name="numero_de_telephone"  id="numéro_de_téléphone" placeholder="phone"/><br />
+        <p>Dans quel pays habitez-vous ? </p>
+        <select name="pays" id="pays" >
+                                 <option value="fr">France</option>
+                                <option value="it">italia</option>
+        </select></br>
+        <input type= "email" name="f"  id="e" placeholder="@ Email"/><br />
+        <input type= "password" name="pass"  id="p" placeholder="password"/><br />
+        <p>i agree to the <a href="default.asp" target="-blank">terms and conditions</a> and
+             <a href="default.asp" target="-blank">Privacy Policy</a> </p></br>
+         <input type="submit" value="enregitrer"  /> 
+             
+    </from>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,103 @@
+ 
+
+                if(!empty($_POST['adresse']) ) {
+                	$newadresse=$_POST['adresse'];
+                        $id =$_SESSION['id'];
+
+                        $requser = $conn ->prepare("UPDATE connexion SET adresse = ? WHERE id = ?");
+                        $requser->execute(array($newadresse,$id));
+                      
+                         }
+
+                         if(($_POST['password'])==($_POST['motdepasse'])) {
+                         	$id =$_SESSION['id'];
+                         	$newpassword=$_POST['password'];
+                       
+                        $insertmp = $conn->prepare("UPDATE connexion SET password= ? WHERE id = ?"); //modifier la ligne de la base 
+                       $insertmp->execute(array($newpassword, $id));
+                     header("Location: accesPatient.php"); 
+
+                  	}
+
+
+
+
+                  	  if(!empty($_POST['adresse']) AND !empty ($_POST['password']) AND !empty ($_POST['motdepasse'])) {
+
+                        $newadresse=$_POST['adresse'];
+                        $id =$_SESSION['id'];
+                        $newpassword=$_POST['password'];
+                        $requser = $conn ->prepare("UPDATE connexion SET adresse = ? WHERE id = ?");
+                        $requser->execute(array($newadresse,$id));
+
+                        $insertmp = $conn->prepare("UPDATE connexion SET password= ? WHERE id = ?"); //modifier la ligne de la base 
+                       $insertmp->execute(array($newpassword, $id));
+
+
+
+
+                  header('Location: accesPatient.php'); }
+                    else{
+                  	$err = "Tous les champs doivent être complétés ou bien confirmez votre motdepasses  !";
+                        }
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="profilc.css">
+<body>
+<div id="conteneur" style="border:none;">
+	<div  class="blocksearch">
+		<div class="formulaire">
+			<h1>modifier mon mot de passe</h1>
+			
+		</div>
+			
+		<div class="formulaire">
+			<form name="login" action="profil.php" method="post">
+				<table width="">
+					<tr>
+						<td style="">nouveau adresse :</td>
+						<td width=""><input class="input_form" type="text" name="adresse" style="width:250px;"><br /></td>
+						<td width="">&nbsp;</td>
+					</tr>
+
+					<tr>
+						<td style="">nouveau mot de passe :</td>
+						<td width=""><input class="input_form" type="text" name="username" style="width:250px;"><br /></td>
+						<td width="">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="">confirmer du nouveau Mot de passe :</td>
+						<td width=""> <input class="input_form" type="password" name="password" style="width:250px;"></td>
+						
+						</tr>
+					<tr>
+						<td width=""><input type="submit" value="confirmer" /> </td>
+                    </tr>
+				</table>
+			</form>	
+			
+		</div>
+        <div style="margin-left: -300px; margin-top:20px;">
+            
+                <!-- Contenu par défaut du bas de page de connexion lorsque la langue est 
+            inconnue, à modifier dans le fichier connexion.asp&nbsp; -->
+            
+        </div>
+	</div>
+
+</div>
+
+</body>
+</html>

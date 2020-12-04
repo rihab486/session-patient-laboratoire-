@@ -1,0 +1,50 @@
+body {
+	color:#575759;
+	font-family:Arial, Verdana;
+	font-size: 12px;
+	margin:auto;
+	padding: 0;
+	background-image:url(../images/fond_int.png);
+	background-attachment:fixed
+}
+
+p {
+	margin: 0 0 10px 0;
+}
+#blocksearch {
+	width:218px;
+	float:right;
+	background-color:#EFEFEF;
+	height:74px;
+	color:#575759;
+	font-size:10px;
+	font-weight:bold;
+}
+
+.formulaire h1{
+	color:#008194;
+}
+.blocksearch{
+	background-image:
+
+	color:#575759;
+	font-size:10px;
+	font-weight:bold;
+	width:610px;
+	height:456px;
+	padding-top:220px;
+	padding-left:350px;
+	margin:auto;
+}
+
+.input_form{ 
+	COLOR: #627479; 
+	FONT-FAMILY:Arial, Helvetica, "sans serif"; 
+	FONT-SIZE: 11px;
+	height:19px;
+	width:91px;
+}
+
+.formulaire{
+	font-size:12px;
+}

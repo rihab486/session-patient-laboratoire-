@@ -1,0 +1,22 @@
+ .monBoutton {
+    
+   text-decoration:none; display: flex; 
+   justify-content: center ;
+   color: white;
+   font-size: 0.9em; 
+   font-weight: 500;
+    border-radius: 3px;
+    
+    background-color: #3a6289;border-color:#3a6289;
+       cursor: pointer; padding: 6px ;
+    width: 230px; height: 35px ;
+  }
+
+  .monBoutton:hover {
+    
+    background-color: #2d4d6c;
+    color: white;
+    text-decoration:none; 
+  }
+	
+

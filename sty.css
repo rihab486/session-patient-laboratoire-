@@ -1,0 +1,16 @@
+form input[type="text"],
+form input[type="number"],
+form input[type="password"],
+form input[type="date"]  {
+  border-color:#B0E0E6;
+}
+.title {
+  font-size: 4vh;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 30px;
+  margin-bottom: 3vh;
+}
+
+.form-control { border-color:#B0E0E6;}
